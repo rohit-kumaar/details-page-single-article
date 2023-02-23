@@ -1,27 +1,42 @@
 .single-article {
-  border: 1px solid red;
   margin-top: 44px;
 
   &-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+    }
 
     &__search {
       display: flex;
       align-items: center;
-      width: 650px;
+      width: 100%;
       height: 50px;
       padding-left: 23px;
       background-color: #fafafa;
       border: 1px solid #ececec;
       border-radius: 2px;
 
+      @media (min-width: 768px) {
+        width: 60%;
+      }
+
+      @media (min-width: 992px) {
+        width: 650px;
+      }
+
       > input {
         width: 100%;
         height: 100%;
         padding-inline: 12.4px;
         border: 0;
+        background-color: #fafafa;
 
         &:focus {
           outline: 0;
@@ -39,11 +54,12 @@
 
     &__blogs {
       position: relative;
+
       > button {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 180px;
+        width: 100%;
         height: 40px;
         padding-left: 20px;
         padding-right: 18px;
@@ -51,6 +67,10 @@
         border-radius: 4px;
         background-color: #f1f2f6;
         border: 1px solid #edf1f5;
+
+        @media (min-width: 768px) {
+          width: 180px;
+        }
 
         span {
           font-size: 14px;
@@ -61,6 +81,7 @@
       }
 
       .single-article-header-items {
+        display: none; // TODO: remove
         position: absolute;
         top: 45px;
         right: 0;
@@ -110,10 +131,19 @@
   }
 
   &-card {
-    width: 32.51%;
-    height: 471px;
+    width: 100%;
+    height: fit-content;
     border-radius: 6px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 768px) {
+      width: 49%;
+      height: 471px;
+    }
+
+    @media (min-width: 992px) {
+      width: 32.51%;
+    }
 
     &__content {
       display: flex;
@@ -121,7 +151,11 @@
       align-items: self-start;
       justify-content: space-between;
       height: 252px;
-      padding: 18px 32px 32px 32px;
+      padding: 18px 15px 32px;
+
+      @media (min-width: 992px) {
+        padding: 18px 32px 32px;
+      }
 
       > span {
         font-weight: 600;
