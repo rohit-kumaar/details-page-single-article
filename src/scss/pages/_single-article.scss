@@ -3,6 +3,10 @@
   margin-top: 44px;
 
   &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     &__search {
       display: flex;
       align-items: center;
@@ -29,6 +33,68 @@
           line-height: 19px;
           color: #001d37;
           opacity: 0.4;
+        }
+      }
+    }
+
+    &__blogs {
+      position: relative;
+      > button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 18px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #f1f2f6;
+        border: 1px solid #edf1f5;
+
+        span {
+          font-size: 14px;
+          line-height: 14px;
+          letter-spacing: 0.4375px;
+          color: #666666;
+        }
+      }
+
+      .single-article-header-items {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 340px;
+        min-height: 304px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(4.07742px);
+        box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+        &__top {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-top: 24px;
+          padding-left: 24px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #dddddd;
+        }
+
+        &__bottom {
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 15px;
+          padding-top: 18px;
+          padding-left: 24px;
+          padding-bottom: 24px;
+
+          > div {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
         }
       }
     }
@@ -81,4 +147,17 @@
       }
     }
   }
+}
+
+.blog-checkbox {
+  width: 24px;
+  height: 24px;
+  background: #007ee7;
+  border: 1px solid #007ee7;
+  border-radius: 4px;
+}
+
+.blog-title {
+  letter-spacing: 0.5px;
+  color: #222222;
 }
