@@ -145,6 +145,14 @@
       width: 32.51%;
     }
 
+    > img {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
+
     &__content {
       display: flex;
       flex-direction: column;
